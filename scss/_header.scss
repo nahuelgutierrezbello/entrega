@@ -1,0 +1,83 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 0 4px 0 map-get($color, shadow-black-5);
+  
+    .navbar {
+      margin: 0;
+      padding: 0;
+  
+      .container-fluid {
+        background-image: linear-gradient(
+          to right,
+          map-get($color, secondary-color),
+          #f8f8f8,
+          #f8f8f8,
+          #f8f8f8
+        );
+        padding: 0;
+        margin: 0;
+  
+        .navbar-brand {
+          width: 35%;
+          margin: 0;
+          padding: 0;
+  
+          .logo-navbar {
+            width: 130px;
+            height: auto;
+          }
+        }
+  
+        .navbar-toggler {
+          margin-right: 2%;
+        }
+  
+        .nav-link {
+          color: map-get($color, primary-color);
+          padding-left: 2%;
+          transition: $transition-1;
+  
+          &:hover {
+            color: map-get($color, shadow-black-7);
+            transform: translateY(-3%);
+          }
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 768px) {
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .nav-link {
+        font-size: 110%;
+      }
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .navbar-collapse {
+      flex-grow: 0;
+      padding-right: 3%;
+      width: 50%;
+      justify-content: end;
+    }
+    .navbar-nav {
+      width: 100%;
+      justify-content: space-around;
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    nav {
+      .nav-link {
+        font-size: 130%;
+        padding: 2% 3%;
+      }
+    }
+  }

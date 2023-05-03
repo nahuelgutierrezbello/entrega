@@ -1,0 +1,163 @@
+.body__tra {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  
+    .conteiner__tra {
+      background-image: url(../Imgs/real.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+  
+      .conteiner__tra--div__title {
+        @include div-title;
+  
+        .div__title--title__tra {
+          @include title;
+        }
+      }
+  
+      .conteiner__tra--gallery__product {
+        display: flex;
+        width: auto;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10% 0;
+  
+        .gallery__tratamientos--article__tratamirntos {
+          @include cards;
+  
+          &:hover {
+            @include hover-cards;
+          }
+  
+          .article__tratamientos--image__tratamientos {
+            width: 100%;
+          }
+  
+          .article__tratamientos--text__tra{
+            background-color: map-get($color, primary-color);
+            width: 100%;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+  
+            .text__tra--title__product {
+              font-size: 24px;
+              text-align: center;
+              padding: 1%;
+              color: map-get($color, secondary-color);
+            }
+  
+            p {
+              text-align: center;
+              padding: 2%;
+              color: map-get($color, secondary-color);
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .body__tra{
+      .conteiner__tra {
+        .conteiner__tra--div__title {
+          padding: 4% 0;
+  
+          .div__title--title__tra {
+            font-size: 240%;
+          }
+        }
+  
+        .conteiner__tra--gallery__tratamientos {
+          .gallery__tratamientos--article__tratamientos {
+            width: 35%;
+  
+            &:hover {
+              width: 40%;
+            }
+  
+            .article__tratamientos--text__tra {
+              .text__pro--title__product {
+                font-size: 160%;
+              }
+  
+              p {
+                font-size: 110%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .body__tra {
+      .conteiner__tra {
+        .conteiner__tra--div__title {
+          padding: 2% 0;
+  
+          .div__title--title__tra {
+            font-size: 200%;
+          }
+        }
+  
+        .conteiner__tra--gallery__tratamientos {
+          padding: 2% 0;
+  
+          .gallery__tratamientos--article__tratamientos {
+            width: 23%;
+  
+            &:hover {
+              width: 24%;
+            }
+  
+            .article__tratamientos--text__tra {
+              .text__tra--title__tratamientos {
+                font-size: 160%;
+              }
+  
+              p {
+                font-size: 110%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .body__tra {
+      .conteiner__tra {
+        .conteiner__tra--div__title {
+          .div__title--title__tra {
+            font-size: 230%;
+          }
+        }
+  
+        .conteiner__tra--gallery__tratamientos {
+          .gallery__tratamientos--article__tratamientos {
+            width: 22%;
+  
+            &:hover {
+              width: 23%;
+            }
+            .article__tratamientos--text__tra {
+              .text__tra--title__tratamientos {
+                font-size: 190%;
+              }
+  
+              p {
+                font-size: 130%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

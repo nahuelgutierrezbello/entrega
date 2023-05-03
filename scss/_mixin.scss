@@ -1,0 +1,35 @@
+@mixin cards {
+    width: 65%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5%;
+    border: 1px solid map-get($color, primary-color);
+    border-radius: 15px;
+    box-shadow: 0 0 10px map-get($color, primary-color);
+    transition: $transition-1;
+  }
+  
+  @mixin hover-cards {
+    transform: translateY(-3%);
+    box-shadow: 0 0 15px map-get($color, primary-color);
+    width: 80%;
+    height: auto;
+  }
+  
+  @mixin div-title {
+    width: 100%;
+    background-color: map-get($color, primary-color);
+    padding: 7% 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @mixin title {
+    color: map-get($color, secondary-color);
+    font-size: 200%;
+    margin: 0;
+  }

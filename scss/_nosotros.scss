@@ -1,0 +1,117 @@
+.body__nos {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  
+    .conteiner__nos {
+      background-image: url(../imagenes/fondo.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+  
+      .conteiner__nos--div__title {
+        @include div-title;
+  
+        .div__title--title__nos {
+          @include title;
+        }
+      }
+  
+      #conteiner__nos--section__left {
+        text-align: center;
+        padding: 8% 8%;
+      }
+  
+      #conteiner__nos--images__nos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        .images__nos--image {
+          width: 30%;
+          height: auto;
+          margin: 0 3%;
+          margin-bottom: 8%;
+          transition: $transition-1;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  
+          &:hover {
+            transform: translateY(-3%);
+            width: 45%;
+            height: auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.99);
+          }
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .body__nos {
+      .conteiner__nos {
+        .conteiner__nos--div__title {
+          padding: 4% 0;
+  
+          .div__title--title__nos {
+            font-size: 240%;
+          }
+        }
+      }
+    }
+  
+    .section__left--p__nos {
+      font-size: 130%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .body__nos {
+      .conteiner__nos {
+        .conteiner__nos--div__title {
+          padding: 2% 0;
+  
+          .div__title--title__nos {
+            font-size: 200%;
+          }
+        }
+  
+        #conteiner__nos--section__left {
+          padding: 5% 8%;
+  
+          .section__left--p__nos {
+            font-size: 120%;
+          }
+        }
+  
+        #conteiner__nos--images__nos {
+          .images__nos--image {
+            width: 16%;
+            margin-bottom: 6%;
+  
+            &:hover {
+              width: 18%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .body__nos {
+      .conteiner__nos {
+        .conteiner__nos--div__title {
+          .div__title--title__nos {
+            font-size: 230%;
+          }
+        }
+  
+        #conteiner__nos--section__left {
+          .section__left--p__nos {
+            font-size: 140%;
+          }
+        }
+      }
+    }
+  }
